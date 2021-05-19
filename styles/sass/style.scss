@@ -157,7 +157,6 @@ body {
     .header {
         display: none;
     }
-
     .mobile-header {
         display: flex;
     }
@@ -166,20 +165,17 @@ body {
 /* WELCOME SCREEN */
 .welcome-screen {
     width: 100%;
-    //height: 100vh;
     background: url("../../img/welcome-bg.png") no-repeat top center;
     background-size: cover;
 
     &__container {
         width: 100%;
         max-width: 1440px;
-        //height: 100%;
         margin: 0 auto;
         padding: 25vh 0;
         display: flex;
         align-items: center;
     }
-
     &__box {
         flex: 1;
         padding: 30px;
@@ -190,7 +186,6 @@ body {
             font-size: 3em;
             font-weight: 200;
             line-height: 1;
-            //margin-top: 100px;
 
             span {
                 color: modules.$white;
@@ -198,7 +193,6 @@ body {
                 text-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
             }
         }
-
         p {
             margin: 40px 0;
             color: modules.$white;
@@ -206,7 +200,6 @@ body {
             letter-spacing: 1px;
             font-weight: 300;
         }
-
         .button {
             @include button(modules.$white, modules.$gray);
         }
@@ -223,15 +216,155 @@ body {
             h2 {
                 font-size: 8vw;
             }
-
             p {
                 width: 75%;
                 font-weight: 500;
             }
         }
-
         &__box:nth-child(2) {
             display: none;
+        }
+    }
+}
+
+/* ABOUT US */
+.about-us {
+    margin: 10vh 0;
+
+    &__container {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+    }
+    &__image {
+        padding: 50px;
+        display: flex;
+        align-items: center;
+        flex: 1;
+
+        img {
+            width: 100%;
+        }
+    }
+    &__text {
+        padding: 5vw;
+        displaY: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+
+        h1 {
+            font-family: modules.$title-font;
+            font-size: 2em;
+
+            span {
+                color: modules.$green;
+                font-size: 3.5vw;
+            }
+        }
+        h4 {
+            font-family: modules.$title-font;
+            margin-top: 20px;
+            font-weight: 800;
+        }
+        img {
+            width: 300px;
+            margin-top: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    .about-us {
+
+        &__container {
+            flex-direction: column-reverse;
+        }
+        &__text {
+            font-size: 2vw;
+
+            h1 {
+
+                span {
+                    font-size: 8vw;
+                }
+            }
+            img {
+                width: 200px;
+            }
+        }
+    }
+}
+
+/* SERVICES */
+.services {
+    width: 100%;
+    background: url("../../img/services-bg.png") no-repeat center top;
+    background-size: cover;
+    color: modules.$white;
+
+    &__container {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        //border: 1px solid red;
+    }
+    &__other {
+        display: flex;
+        padding: 5vw 0;
+
+        &__image {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            //border: 1px solid red;
+
+            img {
+                width: 100%;
+            }
+        }
+        &__text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1;
+            padding: 0 3vw;
+            //border: 1px solid red;
+
+            h2 {
+                color: modules.$white;
+                font-family: modules.$title-font;
+                font-size: 1.5em;
+                line-height: 1.2;
+                margin-bottom: 3vw;
+
+                span {
+                    font-size: 5em;
+                    color: modules.$blue;
+
+                    span {
+                        font-size: .5em;
+                    }
+                }
+            }
+
+            ol {
+                padding-left: 30px;
+                color: modules.$blue;
+                font-weight: 400;
+            }
+
+            p {
+                padding: 10px 0;
+                margin-top: 30px;
+                font-family: modules.$title-font;
+            }
+
+            p:nth-of-type(1) {
+                border-top: 1px dotted modules.$white;
+            }
         }
     }
 }

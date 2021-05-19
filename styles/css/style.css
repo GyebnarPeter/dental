@@ -197,5 +197,121 @@ body {
     display: none;
   }
 }
+/* ABOUT US */
+.about-us {
+  margin: 10vh 0;
+}
+.about-us__container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+}
+.about-us__image {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.about-us__image img {
+  width: 100%;
+}
+.about-us__text {
+  padding: 5vw;
+  displaY: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+.about-us__text h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2em;
+}
+.about-us__text h1 span {
+  color: #0cb8b6;
+  font-size: 3.5vw;
+}
+.about-us__text h4 {
+  font-family: "Playfair Display", serif;
+  margin-top: 20px;
+  font-weight: 800;
+}
+.about-us__text img {
+  width: 300px;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 992px) {
+  .about-us__container {
+    flex-direction: column-reverse;
+  }
+  .about-us__text {
+    font-size: 2vw;
+  }
+  .about-us__text h1 span {
+    font-size: 8vw;
+  }
+  .about-us__text img {
+    width: 200px;
+  }
+}
+/* SERVICES */
+.services {
+  width: 100%;
+  background: url("../../img/services-bg.png") no-repeat center top;
+  background-size: cover;
+  color: #ffffff;
+}
+.services__container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.services__other {
+  display: flex;
+  padding: 5vw 0;
+}
+.services__other__image {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.services__other__image img {
+  width: 100%;
+}
+.services__other__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  padding: 0 3vw;
+}
+.services__other__text h2 {
+  color: #ffffff;
+  font-family: "Playfair Display", serif;
+  font-size: 1.5em;
+  line-height: 1.2;
+  margin-bottom: 3vw;
+}
+.services__other__text h2 span {
+  font-size: 5em;
+  color: #115278;
+}
+.services__other__text h2 span span {
+  font-size: 0.5em;
+}
+.services__other__text ol {
+  padding-left: 30px;
+  color: #115278;
+  font-weight: 400;
+}
+.services__other__text p {
+  padding: 10px 0;
+  margin-top: 30px;
+  font-family: "Playfair Display", serif;
+}
+.services__other__text p:nth-of-type(1) {
+  border-top: 1px dotted #ffffff;
+}
 
 /*# sourceMappingURL=style.css.map */
