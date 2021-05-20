@@ -245,8 +245,8 @@ body {
   .about-us__container {
     flex-direction: column-reverse;
   }
-  .about-us__text {
-    font-size: 2vw;
+  .about-us__text h1 {
+    font-size: 5vw;
   }
   .about-us__text h1 span {
     font-size: 8vw;
@@ -255,63 +255,164 @@ body {
     width: 200px;
   }
 }
-/* SERVICES */
-.services {
+/* SERVICES OTHER */
+.services-other {
   width: 100%;
   background: url("../../img/services-bg.png") no-repeat center top;
   background-size: cover;
   color: #ffffff;
 }
-.services__container {
+.services-other__container {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-}
-.services__other {
-  display: flex;
   padding: 5vw 0;
+  display: flex;
 }
-.services__other__image {
+.services-other__image {
+  flex-grow: 1;
+  flex-basis: 0;
   display: flex;
   align-items: center;
-  flex: 1;
+  justify-content: center;
 }
-.services__other__image img {
-  width: 100%;
+.services-other__image img {
+  width: 90%;
 }
-.services__other__text {
+.services-other__text {
+  flex-grow: 1;
+  flex-basis: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex: 1;
   padding: 0 3vw;
 }
-.services__other__text h2 {
+.services-other__text h2 {
   color: #ffffff;
   font-family: "Playfair Display", serif;
   font-size: 1.5em;
   line-height: 1.2;
   margin-bottom: 3vw;
 }
-.services__other__text h2 span {
+.services-other__text h2 span {
   font-size: 5em;
   color: #115278;
 }
-.services__other__text h2 span span {
+.services-other__text h2 span span {
   font-size: 0.5em;
 }
-.services__other__text ol {
+.services-other__text ol {
   padding-left: 30px;
   color: #115278;
   font-weight: 400;
 }
-.services__other__text p {
+.services-other__text p {
   padding: 10px 0;
   margin-top: 30px;
   font-family: "Playfair Display", serif;
 }
-.services__other__text p:nth-of-type(1) {
+.services-other__text p:nth-of-type(1) {
   border-top: 1px dotted #ffffff;
+}
+
+@media screen and (max-width: 992px) {
+  .services-other__container {
+    flex-direction: column-reverse;
+  }
+  .services-other__image {
+    padding: 15vw 0;
+  }
+}
+/* SERVICES */
+.services__container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 5vw auto;
+  text-align: center;
+}
+.services__container a {
+  color: #ffffff;
+  background: #343d4b;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 3px 1px rgba(34, 34, 34, 0.2);
+  font-size: 14px;
+  font-weight: 400;
+  transition: 0.3s ease-out;
+}
+.services__container a:hover {
+  background: #ffffff;
+  color: #343d4b;
+}
+.services__header {
+  margin-bottom: 5vw;
+}
+.services__header h4 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5em;
+  font-weight: 200;
+}
+.services__header h2 {
+  font-family: "Playfair Display", serif;
+  color: #0cb8b6;
+  font-size: 3em;
+}
+.services__header p {
+  width: 500px;
+  margin: 0 auto;
+  color: #808080;
+}
+.services__boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-bottom: 3vw;
+}
+.services__box {
+  padding: 2vw;
+  line-height: 1.3;
+  font-size: 14px;
+}
+.services__box img {
+  width: 100px;
+}
+.services__box h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.7em;
+  font-weight: 400;
+  margin: 15px 0;
+}
+.services__box p {
+  color: #808080;
+  line-height: 1.5;
+  width: 75%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1440px) {
+  .services__container {
+    max-width: 992px;
+  }
+  .services__boxes {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 768px) {
+  .services__header h4 {
+    font-size: 5vw;
+  }
+  .services__header h2 {
+    font-size: 10vw;
+  }
+  .services__header p {
+    width: 90%;
+  }
+  .services__boxes {
+    grid-template-columns: 1fr;
+  }
+  .services__box {
+    margin: 25px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
