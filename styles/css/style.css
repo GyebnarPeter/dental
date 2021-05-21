@@ -16,6 +16,7 @@ body {
   position: absolute;
   width: 100%;
   color: #ffffff;
+  z-index: 100;
 }
 .header__container {
   max-width: 1440px;
@@ -135,7 +136,7 @@ body {
   padding: 0 30px;
   display: none;
   align-items: center;
-  z-index: 100;
+  z-index: 10;
 }
 .mobile-header__logo {
   height: 100%;
@@ -247,7 +248,7 @@ body {
 /* WELCOME SCREEN */
 .welcome-screen {
   width: 100%;
-  background: url("../../img/welcome-bg.png") no-repeat top center;
+  background: url("../../img/welcome-bg.webp") no-repeat top center;
   background-size: cover;
 }
 .welcome-screen__container {
@@ -299,7 +300,7 @@ body {
 
 @media screen and (max-width: 992px) {
   .welcome-screen {
-    background: url("../../img/welcome-bg-mobile.png") no-repeat top right;
+    background: url("../../img/welcome-bg-mobile.webp") no-repeat top right;
   }
   .welcome-screen__box h2 {
     font-size: 8vw;
@@ -373,7 +374,7 @@ body {
 /* SERVICES OTHER */
 .services-other {
   width: 100%;
-  background: url("../../img/services-bg.png") no-repeat center top;
+  background: url("../../img/services-bg.webp") no-repeat center top;
   background-size: cover;
   color: #ffffff;
 }
@@ -445,7 +446,7 @@ body {
   margin: 5vw auto 10vw auto;
   text-align: center;
 }
-.services__container a {
+.services__container .button {
   color: #ffffff;
   background: #343d4b;
   text-decoration: none;
@@ -456,7 +457,7 @@ body {
   font-weight: 400;
   transition: 0.3s ease-out;
 }
-.services__container a:hover {
+.services__container .button:hover {
   background: #ffffff;
   color: #343d4b;
 }
@@ -500,8 +501,20 @@ body {
 .services__box p {
   color: #808080;
   line-height: 1.5;
+  height: 50px;
   width: 75%;
   margin: 0 auto;
+}
+.services__box a {
+  text-decoration: none;
+  color: #1ebeb6;
+  font-family: "Playfair Display", serif;
+  font-weight: 800;
+  margin-top: 15px;
+  display: block;
+}
+.services__box a:hover {
+  color: #343d4b;
 }
 
 @media screen and (max-width: 1440px) {
@@ -529,10 +542,136 @@ body {
     margin: 25px;
   }
 }
+/* SUBPAGE */
+.subpage-title {
+  background: url("../../img/subpage-title-bg.png") no-repeat bottom center;
+  background-size: cover;
+  padding: 200px 0;
+  color: #ffffff;
+}
+.subpage-title__container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 30px;
+}
+.subpage-title h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.5em;
+}
+.subpage-title p {
+  width: 50%;
+}
+
+@media screen and (max-width: 992px) {
+  .subpage-title {
+    background: url("../../img/subpage-title-mobile-bg.png") no-repeat bottom right;
+  }
+
+  h1 {
+    line-height: 1.2;
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-weight: 500;
+  }
+}
+@media screen and (max-width: 768px) {
+  p {
+    width: 75%;
+  }
+}
+/* SUBPAGE SERVICES */
+.subpage-services__container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 5vw auto;
+  padding: 3vw;
+  display: flex;
+}
+.subpage-services__main {
+  flex: 7;
+  padding-right: 8vw;
+}
+.subpage-services__main img {
+  width: 100%;
+}
+.subpage-services__main h3 {
+  font-family: "Playfair Display", serif;
+  color: #1ebeb6;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+.subpage-services__main h4 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 1vh;
+}
+.subpage-services__main p {
+  margin-bottom: 20px;
+}
+.subpage-services__aside {
+  flex: 3;
+}
+.subpage-services__aside__container {
+  padding: 2vw;
+  border: 12px solid rgba(0, 0, 0, 0.1);
+}
+.subpage-services__aside h2 {
+  font-family: "Playfair Display", serif;
+  color: #1ebeb6;
+  font-size: 1.5em;
+}
+.subpage-services__aside p {
+  font-size: 14px;
+  margin: 30px 0;
+}
+.subpage-services__aside ul {
+  list-style: none;
+}
+.subpage-services__aside ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.subpage-services__aside ul li a {
+  text-decoration: none;
+  color: #808080;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Playfair Display", serif;
+}
+.subpage-services__aside ul li img {
+  width: 25px;
+}
+
+@media screen and (max-width: 1280px) {
+  .subpage-services__main {
+    flex: 7;
+  }
+  .subpage-services__aside {
+    flex: 4;
+  }
+}
+@media screen and (max-width: 992px) {
+  .subpage-services__main {
+    width: 100%;
+    padding: 0;
+  }
+  .subpage-services__main p {
+    font-weight: 200;
+  }
+  .subpage-services__aside {
+    display: none;
+  }
+}
 /* FOOTER */
 .footer {
   background: #1ebeb6;
   color: #ffffff;
+  z-index: 1;
 }
 .footer__top-radius {
   position: relative;
