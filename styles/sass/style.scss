@@ -4,12 +4,13 @@
     color: $font-color;
     background: $bg-color;
     text-decoration: none;
-    padding: 15px 30px;
+    padding: 10px 30px;
     border-radius: 4px;
     box-shadow: 1px 1px 3px 1px rgba(34,34,34,.2);
     font-size: 14px;
     font-weight: 400;
     transition: .3s ease-out;
+    display: inline-block;
 
     &:hover {
         background: $font-color;
@@ -575,22 +576,95 @@ body {
     p { width: 50%; }
 }
 
+.subpage-title-services {
+    background: url("../../img/subpage-title-services-bg.png") no-repeat bottom center;
+}
+
 @media screen and (max-width: 992px) {
     
-    .subpage-title { background: url("../../img/subpage-title-mobile-bg.png") no-repeat bottom right; }
-    h1 {
-        line-height: 1.2;
-        margin-bottom: 30px;
+    .subpage-title {
+        background: url("../../img/subpage-title-mobile-bg.png") no-repeat top right;
+        
+        h1 {
+            line-height: 1.2;
+            margin-bottom: 30px;
+            font-size: 10vw;
+        }
+        p { font-weight: 500; }
     }
-    p { font-weight: 500; }
+
+    .subpage-title-services {
+        background: url("../../img/subpage-title-services-mobile-bg.png") no-repeat top right;
+    }
 }
 
 @media screen and (max-width: 768px) {
 
-    p { width: 75%; }
+    .subpage-title {
+        p { width: 75%; }
+    }
 }
 
-/* SUBPAGE SERVICES */
+.subpage {
+
+    &__container {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+    h1 {
+        font-family: modules.$title-font;
+        color: modules.$green;
+        font-size: 2em;
+        margin-bottom: 25px;
+    }
+    h3 {
+        font-family: modules.$title-font;
+        font-size: 1.2em;
+    }
+    p { margin-bottom: 20px; }
+}
+
+.subpage-dental-care {
+
+    &__item { display: flex; }
+    &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+        padding: 30px;
+
+        img { width: 100%; }
+        h2 {
+            font-family: modules.$title-font;
+            color: modules.$green;
+            font-size: 2.4em;
+            line-height: 1.4;
+        }
+        h3 {
+            margin-bottom: 15px;
+        }
+        ol, ul {
+            padding: 0 0 2vw 2vw;
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    .subpage-dental-care {
+
+        &__item {
+            flex-direction: column-reverse;
+        }
+        &__item:nth-of-type(2) {
+            flex-direction: column;
+        }
+    }
+}
+
 .subpage-services {
     
     &__container {
@@ -616,6 +690,7 @@ body {
             margin-bottom: 1vh;
         }
         p { margin-bottom: 20px; }
+        ul { padding: 0 0 30px 30px; }
     }
     &__aside {
         flex: 3;
@@ -680,6 +755,71 @@ body {
     }  
 }
 
+.subpage-my-job {
+
+    &__container { padding: 30px; }
+}
+
+/* BLOG */
+.blog {
+
+    &__container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 50px auto 0 auto;
+    }
+
+    &__article {
+        padding: 60px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+        h2 {
+            font-family: modules.$title-font;
+            color: modules.$green;
+            font-size: 2em;
+            font-weight: 200;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        img { width: 100%; }
+        span {
+            font-size: 14px;
+            font-style: italic;
+            display: block;
+            text-align: center;
+        }
+        .button {
+            @include button(modules.$green, modules.$white);
+        }
+        &:last-child {
+            border: none;
+        }
+        &__introduction {
+            text-align: center;
+
+            p {
+                width: 75%;
+                margin: 30px auto;
+            }
+        }
+        &__description {
+            width: 75%;
+            margin: 50px auto;
+
+            p {
+                margin-bottom: 20px;
+            }
+
+            ul {
+                padding-left: 30px;
+            }
+            h3 {
+                font-family: modules.$title-font;
+            }
+        }
+    }
+}
+
 /* FOOTER */
 .footer {
     background: modules.$green;
@@ -720,6 +860,7 @@ body {
             font-weight: 600;
             position: relative;
             z-index: 10;
+            margin: 0 auto;
         }
     }
     &__decoration {
